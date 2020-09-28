@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YXU-VU-aY1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Myriad Pro Bold.ttf">
+            <string>MyriadPro-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--List City Controller-->
+        <scene sceneID="ovJ-Ot-r5m">
+            <objects>
+                <viewController storyboardIdentifier="ListCityController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YXU-VU-aY1" customClass="ListCityController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s1a-uH-Ejj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LZz-wa-dgF">
+                                <rect key="frame" x="0.0" y="177" width="414" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.054901960784313725" green="0.65098039215686276" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QED-ot-x3e">
+                                <rect key="frame" x="132.5" y="61" width="149" height="32"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="20"/>
+                                <state key="normal" title="Tỉnh / Thành phố">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXV-03-g7B" customClass="HBSegmentedControl" customModule="WeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="13" y="110" width="388" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UVV-tI-PcF"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFill" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6j-dc-TVr">
+                                <rect key="frame" x="17" y="65.5" width="23" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Kod-RM-1X5"/>
+                                    <constraint firstAttribute="width" constant="23" id="pds-bR-EzX"/>
+                                </constraints>
+                                <state key="normal" image="back">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.054901960784313725" green="0.65098039215686276" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Gb-ux-W2I" firstAttribute="trailing" secondItem="DXV-03-g7B" secondAttribute="trailing" constant="13" id="BHn-4U-IzO"/>
+                            <constraint firstItem="C6j-dc-TVr" firstAttribute="leading" secondItem="1Gb-ux-W2I" secondAttribute="leading" constant="17" id="Kad-99-3LN"/>
+                            <constraint firstItem="C6j-dc-TVr" firstAttribute="centerY" secondItem="1Gb-ux-W2I" secondAttribute="centerY" multiplier="0.17" id="TAE-xh-JlD"/>
+                            <constraint firstItem="QED-ot-x3e" firstAttribute="centerX" secondItem="1Gb-ux-W2I" secondAttribute="centerX" id="Trs-gZ-QCg"/>
+                            <constraint firstItem="1Gb-ux-W2I" firstAttribute="trailing" secondItem="LZz-wa-dgF" secondAttribute="trailing" id="e6p-W0-p3z"/>
+                            <constraint firstItem="LZz-wa-dgF" firstAttribute="top" secondItem="DXV-03-g7B" secondAttribute="bottom" constant="17" id="hNW-an-Gzc"/>
+                            <constraint firstItem="QED-ot-x3e" firstAttribute="centerY" secondItem="C6j-dc-TVr" secondAttribute="centerY" id="hY0-xK-mJW"/>
+                            <constraint firstAttribute="bottom" secondItem="LZz-wa-dgF" secondAttribute="bottom" id="kaC-k4-mDA"/>
+                            <constraint firstItem="DXV-03-g7B" firstAttribute="leading" secondItem="1Gb-ux-W2I" secondAttribute="leading" constant="13" id="sUQ-A0-moH"/>
+                            <constraint firstItem="LZz-wa-dgF" firstAttribute="leading" secondItem="1Gb-ux-W2I" secondAttribute="leading" id="xNX-vR-HC7"/>
+                            <constraint firstItem="DXV-03-g7B" firstAttribute="top" secondItem="QED-ot-x3e" secondAttribute="bottom" constant="17" id="yuk-nb-z07"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Gb-ux-W2I"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="C6j-dc-TVr" id="TtD-pB-MY4"/>
+                        <outlet property="segmentControl" destination="DXV-03-g7B" id="2HI-W0-NoZ"/>
+                        <outlet property="tableView" destination="LZz-wa-dgF" id="Ysq-fp-a4o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtf-XC-VZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334.78260869565219" y="-210.26785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="52" height="52"/>
+    </resources>
+</document>

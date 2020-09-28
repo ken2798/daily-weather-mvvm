@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Myriad Pro Regular.ttf">
+            <string>MyriadPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="KGk-i7-Jjw" customClass="ListCityCell" customModule="WeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="368" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0e-x7-Ztc">
+                        <rect key="frame" x="11" y="9" width="346" height="67"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD2-YL-s80">
+                                <rect key="frame" x="27" y="26" width="41" height="18"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
+                                <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cD2-YL-s80" firstAttribute="centerY" secondItem="J0e-x7-Ztc" secondAttribute="centerY" multiplier="1.05" id="2om-aW-NPD"/>
+                            <constraint firstItem="cD2-YL-s80" firstAttribute="leading" secondItem="J0e-x7-Ztc" secondAttribute="leading" constant="27" id="hDh-89-N6g"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.054901960780000002" green="0.65098039220000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="J0e-x7-Ztc" secondAttribute="bottom" constant="9" id="1Kf-nU-bly"/>
+                    <constraint firstItem="J0e-x7-Ztc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="3Js-d9-5lt"/>
+                    <constraint firstItem="J0e-x7-Ztc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="sco-Mo-O4a"/>
+                    <constraint firstAttribute="trailing" secondItem="J0e-x7-Ztc" secondAttribute="trailing" constant="11" id="ueD-cr-fct"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="boderView" destination="J0e-x7-Ztc" id="0v9-sq-KnO"/>
+                <outlet property="nameCityLabel" destination="cD2-YL-s80" id="WJY-eG-tZp"/>
+            </connections>
+            <point key="canvasLocation" x="166.66666666666669" y="125.55803571428571"/>
+        </tableViewCell>
+    </objects>
+</document>

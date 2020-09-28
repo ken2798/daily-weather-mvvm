@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="Sfk-MB-d1G">
+            <objects>
+                <viewController storyboardIdentifier="HomeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cxi-vD-z3Y" customClass="HomeController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RnV-Fk-01F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch screen " translatesAutoresizingMaskIntoConstraints="NO" id="dMv-yb-5Fz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uz7-ML-zQ9">
+                                <rect key="frame" x="90" y="463" width="140" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="TOr-yT-SNi"/>
+                                    <constraint firstAttribute="height" constant="40" id="Znt-cP-QT0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                <state key="normal" title="Trang chủ" image="home"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKn-Mj-MY4">
+                                <rect key="frame" x="17" y="36" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="2GN-o0-g4t"/>
+                                    <constraint firstAttribute="height" constant="30" id="Kw0-cs-4An"/>
+                                </constraints>
+                                <state key="normal" image="menu"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RKn-Mj-MY4" firstAttribute="centerX" secondItem="dMv-yb-5Fz" secondAttribute="centerX" multiplier="0.2" id="0gy-1X-ksC"/>
+                            <constraint firstItem="fuz-D1-w8l" firstAttribute="trailing" secondItem="dMv-yb-5Fz" secondAttribute="trailing" id="6jr-Hv-V5V"/>
+                            <constraint firstItem="RKn-Mj-MY4" firstAttribute="centerY" secondItem="dMv-yb-5Fz" secondAttribute="centerY" multiplier="0.18" id="9nU-o8-dLd"/>
+                            <constraint firstItem="uz7-ML-zQ9" firstAttribute="centerX" secondItem="dMv-yb-5Fz" secondAttribute="centerX" id="eCN-jW-jTb"/>
+                            <constraint firstItem="dMv-yb-5Fz" firstAttribute="leading" secondItem="fuz-D1-w8l" secondAttribute="leading" id="jRk-VV-q3t"/>
+                            <constraint firstAttribute="bottom" secondItem="dMv-yb-5Fz" secondAttribute="bottom" id="qp1-QS-cdB"/>
+                            <constraint firstItem="dMv-yb-5Fz" firstAttribute="top" secondItem="RnV-Fk-01F" secondAttribute="top" id="sMg-0i-m6i"/>
+                            <constraint firstItem="uz7-ML-zQ9" firstAttribute="centerY" secondItem="dMv-yb-5Fz" secondAttribute="centerY" multiplier="1.7" id="wad-Is-V3z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fuz-D1-w8l"/>
+                    </view>
+                    <connections>
+                        <outlet property="toListCityButton" destination="RKn-Mj-MY4" id="r2B-jv-7S4"/>
+                        <outlet property="toWebViewButton" destination="uz7-ML-zQ9" id="P0P-tU-h32"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIA-DT-A7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-577" y="46"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Launch screen " width="187.5" height="406"/>
+        <image name="home" width="18" height="18"/>
+        <image name="menu" width="26" height="26"/>
+    </resources>
+</document>

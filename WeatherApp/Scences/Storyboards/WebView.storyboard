@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Myriad Pro Bold.ttf">
+            <string>MyriadPro-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="rVq-PP-lRp">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6HQ-i7-3AK" customClass="WebViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iKA-dx-YYg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3d-Xh-kYW">
+                                <rect key="frame" x="0.0" y="106.5" width="414" height="789.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGs-yA-EBn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="98.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HI-8c-pKK">
+                                        <rect key="frame" x="13" y="62.5" width="23" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="Csm-AW-5V9"/>
+                                            <constraint firstAttribute="width" constant="23" id="XDG-5P-9tQ"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="handleTapBackButton:" destination="6HQ-i7-3AK" eventType="touchUpInside" id="R6W-xz-6fl"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trang chủ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMC-MF-782">
+                                        <rect key="frame" x="161" y="63.5" width="92.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="21"/>
+                                        <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.65098039220000004" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="WMC-MF-782" firstAttribute="centerY" secondItem="6HI-8c-pKK" secondAttribute="centerY" id="H1P-Ev-dwB"/>
+                                    <constraint firstItem="WMC-MF-782" firstAttribute="centerX" secondItem="eGs-yA-EBn" secondAttribute="centerX" id="Nua-aS-nUv"/>
+                                    <constraint firstItem="6HI-8c-pKK" firstAttribute="leading" secondItem="eGs-yA-EBn" secondAttribute="leading" constant="13" id="X15-yd-ADC"/>
+                                    <constraint firstItem="6HI-8c-pKK" firstAttribute="centerY" secondItem="eGs-yA-EBn" secondAttribute="centerY" multiplier="1.5" id="Ypc-Q5-Xss"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbt-Mn-WKx">
+                                <rect key="frame" x="0.0" y="98.5" width="414" height="797.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bBE-As-NX7" firstAttribute="trailing" secondItem="zbt-Mn-WKx" secondAttribute="trailing" id="8mI-mU-8Ea"/>
+                            <constraint firstItem="eGs-yA-EBn" firstAttribute="top" secondItem="iKA-dx-YYg" secondAttribute="top" id="FRn-Tu-aM9"/>
+                            <constraint firstItem="eGs-yA-EBn" firstAttribute="height" secondItem="iKA-dx-YYg" secondAttribute="height" multiplier="0.11" id="Fqd-0U-1Rq"/>
+                            <constraint firstAttribute="bottom" secondItem="R3d-Xh-kYW" secondAttribute="bottom" id="Kwm-cd-Obx"/>
+                            <constraint firstItem="zbt-Mn-WKx" firstAttribute="leading" secondItem="bBE-As-NX7" secondAttribute="leading" id="OSt-pw-tem"/>
+                            <constraint firstItem="bBE-As-NX7" firstAttribute="trailing" secondItem="eGs-yA-EBn" secondAttribute="trailing" id="WyS-ho-Wa8"/>
+                            <constraint firstAttribute="bottom" secondItem="zbt-Mn-WKx" secondAttribute="bottom" id="ZlS-38-1pr"/>
+                            <constraint firstItem="R3d-Xh-kYW" firstAttribute="top" secondItem="eGs-yA-EBn" secondAttribute="bottom" constant="8" symbolic="YES" id="fgq-tQ-RPy"/>
+                            <constraint firstItem="eGs-yA-EBn" firstAttribute="leading" secondItem="bBE-As-NX7" secondAttribute="leading" id="h1D-Hw-cAw"/>
+                            <constraint firstItem="R3d-Xh-kYW" firstAttribute="leading" secondItem="bBE-As-NX7" secondAttribute="leading" id="qtR-yq-UzE"/>
+                            <constraint firstItem="R3d-Xh-kYW" firstAttribute="trailing" secondItem="bBE-As-NX7" secondAttribute="trailing" id="rbU-0l-tZC"/>
+                            <constraint firstItem="zbt-Mn-WKx" firstAttribute="top" secondItem="eGs-yA-EBn" secondAttribute="bottom" id="rcU-LN-KRp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bBE-As-NX7"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingView" destination="zbt-Mn-WKx" id="FOo-m1-pF7"/>
+                        <outlet property="webView" destination="R3d-Xh-kYW" id="sex-7G-OxJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mZb-hA-hgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126.08695652173914" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="52" height="52"/>
+    </resources>
+</document>
